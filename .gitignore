@@ -9,9 +9,11 @@ info.php
 #SASS
 css/styles.css.map
 
+# Imágenes
+img/
+
 # Vídeo
-video/*
-!video/crowd.mp4
+video/
 
 #PDF
 cv.pdf
