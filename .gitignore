@@ -1,0 +1,17 @@
+# Sistema
+.DS_Store
+.htaccess
+
+# PHP
+.php.ini
+info.php
+
+#SASS
+css/styles.css.map
+
+# Vídeo
+video/*
+!video/crowd.mp4
+
+#PDF
+cv.pdf
