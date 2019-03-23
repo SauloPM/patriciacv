@@ -51,10 +51,6 @@ hr {
   border: none;
 }
 
-@font-face {
-  font-family: Lobster;
-  src: url(lobster.ttf);
-}
 ::-moz-selection {
   color: white;
   background-color: #4bbee1;
