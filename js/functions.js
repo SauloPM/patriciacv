@@ -1,7 +1,9 @@
-$(document).ready(function() {
+$(window).on("load", function() {
 
     // WOW
-    new WOW().init(); 
+    new WOW({
+        mobile: false
+    }).init(); 
 
     // Spinner
     hideSpinner();
