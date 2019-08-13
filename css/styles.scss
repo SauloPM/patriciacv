@@ -998,38 +998,54 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     background: $gris;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 200;
     width: 100%;
     height: 100vh;
 
     .bar {
         background: $blue;
-        margin: 0 2px;
+        margin: 0 1px;
         width: 8px;
-        height: 125px;
-        animation: sk-stretchdelay 1.2s infinite ease-in-out;
+        height: 100px;
 
-        &:nth-child(2) { animation-delay: -1.1s }
-        &:nth-child(3) { animation-delay: -1.0s }
-        &:nth-child(4) { animation-delay: -0.9s }
-        &:nth-child(5) { animation-delay: -0.8s }
+        -webkit-animation: barras 1.2s infinite ease-in-out;
+                animation: barras 1.2s infinite ease-in-out;
+
+        &:nth-child(2) { -webkit-animation-delay: -1.1s; animation-delay: -1.1s }
+        &:nth-child(3) { -webkit-animation-delay: -1.0s; animation-delay: -1.0s }
+        &:nth-child(4) { -webkit-animation-delay: -0.9s; animation-delay: -0.9s }
+        &:nth-child(5) { -webkit-animation-delay: -0.8s; animation-delay: -0.8s }
     }
 }
 
-@keyframes sk-stretchdelay {
-    0%, 40%, 100% { transform: scaleY(0.4) }
-    20%           { transform: scaleY(1.0) }
+@-webkit-keyframes barras {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(.5);
+            -ms-transform: scaleY(.5);
+                transform: scaleY(.5);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+                transform: scaleY(1);
+    }
 }
 
-// Web Host App Watermark
-
-a[title^="Hosted on free web hosting"] {
-    display: none;
+@keyframes barras {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(.5);
+            -ms-transform: scaleY(.5);
+                transform: scaleY(.5);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+                transform: scaleY(1);
+    }
 }
